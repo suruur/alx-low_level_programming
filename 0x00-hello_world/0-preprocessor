@@ -1,2 +1,3 @@
 #!/bin/bash
-cpp "$CFILE='main.c'"> c
+export $CFILE=main.c |cpp "$CFILE"> c
+
