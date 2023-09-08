@@ -4,9 +4,11 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+
 /**
- * Entry point - main
- * Always returns 0 (Success)
+ * main -  Entry point 
+ * 
+ * Return Always 0 (Success)
  */
 int main(void)
 {
