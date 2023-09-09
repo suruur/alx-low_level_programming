@@ -11,13 +11,14 @@ int main(void)
 	int j;
 
 	for (i = 0; i <= 9; i++)
-		for (j = 0; j <= 9; j++)
-			if (i != j )
-			{
-				putchar ('0' + i);
-				putchar ('0' + j);
-				putchar (' ');
-			}
+		for (j = i + 1; j <= 9; j++)
+		{
+			int comb = i * 10 + j;
+			putchar ('0' + (comb / 10));
+			putchar ('0' + (comb % 10));
+			putchar (',');
+			putchar (' ');
+		}
 
 	/* print a new line at the end */
 	putchar ('\n');
