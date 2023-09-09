@@ -12,7 +12,7 @@ int main(void)
 	for (i = 0; i < 16; i++)
 	{	
 		if (i < 10)
-			putchar ('0' + i);
+			putchar('0' + i);
 		else
 			/* print letters a-f as characters*/
 			putchar ('a' + i - 10);
