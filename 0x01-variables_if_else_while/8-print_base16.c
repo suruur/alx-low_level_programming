@@ -16,6 +16,7 @@ int main(void)
 		else 
 			/* print letters a-f as characters*/
 			putchar ('a' + i - 10);
+	}
 
 	/* print a new line at the end */
 	putchar ('\n');
