@@ -14,10 +14,14 @@ int main(void)
 		for (j = i + 1; j <= 9; j++)
 		{
 			int comb = i * 10 + j;
+
 			putchar ('0' + (comb / 10));
 			putchar ('0' + (comb % 10));
-			putchar (',');
-			putchar (' ');
+			if (i != 8 || j != 9)
+			{
+				putchar (',');
+				putchar (' ');
+			}
 		}
 
 	/* print a new line at the end */
