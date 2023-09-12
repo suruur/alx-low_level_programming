@@ -13,7 +13,7 @@ int main(void)
 }
 
 /* Function prints alphabel */
-void print_alphabet(void)
+/*void print_alphabet(void)
 {
 	char letter = 'a';
 
@@ -23,6 +23,6 @@ void print_alphabet(void)
 		letter++;
 	}
 
-	/* print a new line at the end */
+	* print a new line at the end 
 	_putchar ('\n');
-}
+}*/
