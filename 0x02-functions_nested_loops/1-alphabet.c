@@ -3,7 +3,7 @@
 
 
 /**
- * Function : print_alphabet 
+ * Function: print_alphabet
  *
  * Return: void
  */
@@ -18,6 +18,6 @@ void print_alphabet(void)
 		letter++;
 	}
 
-	* print a new line at the end 
+	/* print a new line at the end */
 	_putchar ('\n');
 }
