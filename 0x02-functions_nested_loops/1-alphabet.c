@@ -1,20 +1,13 @@
 #include "main.h"
 
-void print_alphabet(void);
+
 
 /**
- * main - Entry point
+ * Function : print_alphabet 
  *
- * Return: Always 0 (success)
+ * Return: void
  */
-int main(void)
-{
-	print_alphabet();
 
-	return (0);
-}
-
-/* Function prints alphabel */
 void print_alphabet(void)
 {
 	char letter = 'a';
