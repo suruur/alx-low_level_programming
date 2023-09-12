@@ -1,7 +1,7 @@
 #include "main.h"
 #include "1-alphabet.c"
 
-/* Function print_alphabet: print alphabet in lower case */
+/* Function print_alphabet_x10: print alphabet in lower case 10 times */
 void print_alphabet_x10(void)
 {
 	int i;
@@ -9,6 +9,4 @@ void print_alphabet_x10(void)
 	for(i = 0; i < 10; i++)
 		print_alphabet();
 
-	/* print a new line at the end */
-	_putchar ('\n');
 }
