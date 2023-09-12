@@ -1,6 +1,8 @@
 #include "main.h"
 
-/* a function that adds two integers and returns the result. */
+/** 
+* a function that adds two integers and returns the result. 
+*/
 int add(int a, int b)
 {
 	int sum;
@@ -8,5 +10,4 @@ int add(int a, int b)
 	sum = a + b;
 	
 	return (sum);
-}
-	
+}	
