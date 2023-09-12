@@ -1,5 +1,7 @@
 #include "main.h"
 
+void print_alphabet(void);
+
 /**
  * main - Entry point
  *
@@ -13,7 +15,7 @@ int main(void)
 }
 
 /* Function prints alphabel */
-/*void print_alphabet(void)
+void print_alphabet(void)
 {
 	char letter = 'a';
 
@@ -25,4 +27,4 @@ int main(void)
 
 	* print a new line at the end 
 	_putchar ('\n');
-}*/
+}
