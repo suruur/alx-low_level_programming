@@ -11,3 +11,18 @@ int main(void)
 
 	return (0);
 }
+
+/* Function prints alphabel */
+void print_alphabet(void)
+{
+	char letter = 'a';
+
+	while (letter <= 'z')
+	{
+		_putchar (letter);
+		letter++;
+	}
+
+	/* print a new line at the end */
+	_putchar ('\n');
+}
