@@ -1,11 +1,9 @@
 #include "main.h"
 
-
-
 /**
- * Function: print_alphabet
+ * Function print_alphabet: print alphabet in lower case
  *
- * Return: void
+ * void
  */
 
 void print_alphabet(void)
