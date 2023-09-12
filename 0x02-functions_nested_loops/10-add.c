@@ -8,6 +8,7 @@
 */
 int add(int a, int b)
 {
+	/* a b numbers for adding */
 	int sum;
 	
 	sum = a + b;
