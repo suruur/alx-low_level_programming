@@ -1,6 +1,8 @@
 #include "main.h"
-
-/* Function print_alphabet: print alphabet in lower case */
+/**
+ * Function print_alphabet: print alphabet in lower case
+ * Void
+ */
 void print_alphabet(void)
 {
 	char letter = 'a';
