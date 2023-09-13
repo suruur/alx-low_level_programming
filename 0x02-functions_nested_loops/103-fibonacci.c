@@ -18,7 +18,7 @@ int main(void)
 
             if (nextTerm > 4000000)
             {
-            break; /* Exit the loop if the next term exceeds 4,000,000 */
+                break; /* Exit the loop if the next term exceeds 4,000,000 */
             }
 
             if (nextTerm % 2 == 0)
