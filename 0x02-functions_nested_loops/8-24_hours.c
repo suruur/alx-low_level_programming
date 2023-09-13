@@ -7,10 +7,13 @@
  */
 void jack_bauer(void)
 {
-	if (c >= 'a' && c <= 'z')
-		r = 1;
-	else
-		r = 0;
+	int i;
+	int j;
+	
+	for (i = 0; i < 24; i++)
+		for (j = 0; j <= 59; j++)
+			printf( "%d%d :%d%d\n",i,i,i,j)
+				
 	
 	
 }
