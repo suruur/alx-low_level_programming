@@ -8,11 +8,15 @@ void times_table(void)
 {
 	int i;
 	int j;
+	int t;
 	
     	for (i = 0; i <= 10; i++)
 	{
-		for ( j = 1; j <= 9; j++)
-        		printf("%d,  ", (i * j));
+		for ( j = 0; j <= 9; j++)
+		{
+			t = i * j;
+        		printf("%d,  ", t);
+		}
 		printf("\n");
 	}
 }
