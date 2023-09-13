@@ -18,6 +18,6 @@ void jack_bauer(void)
 			else
 			{
 				int x = i - 1;
-				printf("%d%d:%d%d\n", 0, i, j, x );
+				printf("%d%d:%d%d\n", 0, i, i, j );
 			}
 }
