@@ -10,14 +10,21 @@ void jack_bauer(void)
 {
 	int i;
 	int j;
+	/* int k =; */
 	
 	for (i = 0; i < 24; i++)
+	{
+		/* k = 0; */
 		for (j = 0; j <= 59; j++)
 			if ( i == 0 && j <= 9)
 				printf("%d%d:%d%d\n", i, i, i, j);
 			else
-			{
-				int x = i - 1;
-				printf("%d%d:%d%d\n", 0, i, i, j );
-			}
+				if ( i <= 9 )
+					if (j <= 9)
+						printf("%d%d:%d%d\n", 0, i, i, j );
+					else
+						printf("%d%d:%d\n", 0, i, j);
+				else
+					printf("%d:%d%d\n",  i, i, j );
+	}
 }
