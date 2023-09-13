@@ -21,7 +21,7 @@ void jack_bauer(void)
 			else
 				if ( i <= 9 )
 					if (j <= 9)
-						printf("%d%d:%d%d\n", 0, i, i, j );
+						printf("%d%d:%d%d\n", 0, i, k, j );
 					else
 						printf("%d%d:%d\n", 0, i, j);
 				else
