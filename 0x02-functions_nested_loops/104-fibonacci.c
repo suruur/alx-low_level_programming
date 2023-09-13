@@ -1,4 +1,8 @@
-int a = 1, b = 2, c;
+#include <stdio.h>
+/**
+*/
+int main() {
+    int a = 1, b = 2, c;
     int count = 0;
 
     printf("%d, %d, ", a, b); // Print the first two Fibonacci numbers
@@ -21,3 +25,4 @@ int a = 1, b = 2, c;
     }
 
     return 0;
+}
