@@ -16,20 +16,19 @@ void print_to_98(int n)
 	{
 		int i = n;
 	
-		while(1)
+		while(i != 98)
 		{
         		printf("%d, ", i);
-        		/* if (i != 98)
-            			printf(", "); */
+        		 if (i != 98)
+            			printf(", "); 
+			else 
+				 printf("\n"); 
 
 			if ( i < 98)
 				i++;
 			else
 				i--;
-          		if (i != 98)
-				break;
+          		
 		}
-		printf("\n"); 
-
 	}
 }
