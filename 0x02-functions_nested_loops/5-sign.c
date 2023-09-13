@@ -1,5 +1,9 @@
 #include "main.h"
-/* a function that prints the sign of a number. */
+/**
+* print_sign - a function that prints the sign of a number. 
+* @n: formal parameter
+* Return: r
+*/
 int print_sign(int n)
 {
 	int r;
@@ -12,6 +16,5 @@ int print_sign(int n)
 		else 
 			if ( n == 0)
 				r = 0;
-	
 	return (r);
 }
