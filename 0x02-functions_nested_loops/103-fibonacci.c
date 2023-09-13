@@ -1,25 +1,36 @@
 #include <stdio.h>
 
-int main() {
-    int term1 = 1, term2 = 2, nextTerm;
-    int sum = 2; // Initialize the sum with the second term (2)
+/**
+* main - Entry point 
+* Return: Always 0
+*/
 
-    while (1) {
-        nextTerm = term1 + term2;
+int main(void)
+{
+    int term1 = 1;
+    int term2 = 2;
+    int nextTerm;
+    int sum = 2; /* Initialize the sum with the second term (2) */
 
-        if (nextTerm > 4000000) {
-            break; // Exit the loop if the next term exceeds 4,000,000
-        }
+    while (1)
+    {
+            nextTerm = term1 + term2;
 
-        if (nextTerm % 2 == 0) {
-            sum += nextTerm; // Add even-valued terms to the sum
-        }
+            if (nextTerm > 4000000)
+            {
+            break; /* Exit the loop if the next term exceeds 4,000,000 */
+            }
 
-        term1 = term2;
-        term2 = nextTerm;
+            if (nextTerm % 2 == 0)
+            {
+                sum += nextTerm; /* Add even-valued terms to the sum */
+            }
+
+            term1 = term2;
+            term2 = nextTerm;
     }
 
     printf("The sum of even-valued terms not exceeding 4,000,000 is: %d\n", sum);
 
-    return 0;
+    return (0);
 }
