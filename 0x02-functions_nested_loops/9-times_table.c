@@ -23,10 +23,7 @@ void times_table(void)
 			{
 				if (t < 9)
 				{
-					if((t == 0 && j == 9) || (t == 9 && i == 1))
-						printf(",   ");
-					else
-						printf(",   ");
+					printf(",  ");	
 				}
 				else
 				{
