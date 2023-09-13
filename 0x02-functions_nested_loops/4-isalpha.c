@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * _isalpha - a function that checks for alphabetic character.
 * @c: character to be checked
@@ -7,11 +6,13 @@
 */
 int _isalpha(int c)
 {
+	int r;
 	if (c >= 'a' && c <= 'z')
-		return (1);
+		r = 1;
 	else
-		if ( c >= 'A' && c <= 'Z')
-			return (1);
+		if (c >= 'A' && c <= 'Z')
+			r = 1;
 		else
-			return (0);
+			r = 0;
+	return (r);
 }
