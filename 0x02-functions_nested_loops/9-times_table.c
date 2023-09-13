@@ -23,7 +23,9 @@ void times_table(void)
 				if (t <= 9)
 					printf(",  ");
 				else
+				{
 					printf(", ");
+				}
 		}
 		printf("\n");
 	}
