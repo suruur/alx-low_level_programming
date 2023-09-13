@@ -26,7 +26,7 @@ void print_to_98(int n)
 				i++;
 			else
 				i--;
-          		if (i == 98)
+          		if (i != 98)
 				break;
 		}
 		printf("\n"); 
