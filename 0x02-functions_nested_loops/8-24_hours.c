@@ -13,5 +13,8 @@ void jack_bauer(void)
 	
 	for (i = 0; i < 24; i++)
 		for (j = 0; j <= 59; j++)
-			printf( "%d%d :%d%d\n",i,i,i,j);
+			if ( i <= 9)
+				printf( "%d%d:%d%d\n", i, i, i, j);
+			else
+				printf( "%d:%d\n", i, j);
 }
