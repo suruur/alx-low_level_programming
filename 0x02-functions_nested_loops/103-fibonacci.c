@@ -30,7 +30,7 @@ int main(void)
             term2 = nextTerm;
     }
 
-    printf("The sum of even-valued terms not exceeding 4,000,000 is: %d\n", sum);
+    printf("%d\n", sum);
 
     return (0);
 }
