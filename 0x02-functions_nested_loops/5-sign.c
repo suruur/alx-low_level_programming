@@ -1,20 +1,26 @@
 #include "main.h"
+#include <stdio.h>
 /**
-* print_sign - a function that prints the sign of a number. 
+* print_sign - a function that prints the sign of a number.
 * @n: formal parameter
-* Return: r
+* Return: 1, -1, 0
 */
 int print_sign(int n)
 {
-	int r;
-	
-	if (n < 1)
-		r = '-';
+	if (n < 0)
+	{
+		printf("+");
+		return (1);
+	}
 	else
-		if ( n > 1)
-			r = '+';
-		else 
-			if ( n == 0)
-				r = 0;
-	return (r);
+		if ( n > 0)
+		{
+			printf("-");
+			return (-1);
+		}
+			else
+			{
+			printf("0");
+			return (0);
+			}
 }
