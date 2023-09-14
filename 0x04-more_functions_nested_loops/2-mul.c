@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _isupper - a function that checks if the letter is upper or not.
- *@c: char
- * Return: 1, 0 
+ * mul - multiplt 2 numbers
+ * @a: number 1
+ * @b: number 2
+ * Return: a * b
  */
-int _isupper(int c)
+int mul(int a, int b)
 {
 	int r;
 
-	if (c >= 'A' && c =< 'Z')
-		r = 1;
-	else
-		r = 0;
-
-	return (r);
+	/*for (i = 0; i < 9; i++)
+		_putchar(i);
+	/* print a new line at the end */
+	r = a * b;
+	return r;
 }

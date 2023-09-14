@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_numbers();
+	int x = mul(-402, 4096);
 	return (0);
 }
