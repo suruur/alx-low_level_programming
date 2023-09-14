@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _isdigit - a function that checks if the letter is upper or not.
- *@c: formal parameter
+ * _isdigit - checks for a digit.
+ * @c: formal parameter
  * Return: 1, 0 
  */
 int _isdigit(int c)
