@@ -5,7 +5,7 @@
  *@c: char
  * Return: 1, 0 
  */
-int _isupper(char c)
+int _isupper(int c)
 {
 	int r;
 

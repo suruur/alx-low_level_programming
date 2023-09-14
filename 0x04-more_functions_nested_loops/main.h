@@ -1,2 +1,2 @@
 /*   Is upper */
-int _isupper(char c);
+int _isupper(int c);
