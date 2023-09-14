@@ -1,18 +1,17 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * print_most_numbers - Entry point
  *
- * Return: Always 0 (success)
+ * Return: void
  */
-int main(void)
+void print_most_numbers(void)
 {
-	int  i;
-	char *str = "_putchar";
+	int i;
 
-	for (i = 0; i < 8; i++)
-		_putchar (str[i]);
+	for (i = 0; i < 9; i++)
+		_putchar(i);
 
+	/* print a new line at the end */
 	_putchar ('\n');
-	return (0);
 }
