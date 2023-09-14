@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _isupper - a function that checks if the letter is upper or not.
- *@c: char
+ * _isdigit - a function that checks if the letter is upper or not.
+ *@c: formal parameter
  * Return: 1, 0 
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int r;
 
-	if (c >= 'A' && c =< 'Z')
+	if (c >= '0' && c <= '9')
 		r = 1;
 	else
 		r = 0;

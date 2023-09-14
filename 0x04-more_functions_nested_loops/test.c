@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	int x = mul(-402, 4096);
+	int x = _isdigit(5);
 	return (0);
 }
