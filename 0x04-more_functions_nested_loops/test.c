@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	int x = _isdigit(5);
+	print_line(5);
 	return (0);
 }
