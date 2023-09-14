@@ -16,14 +16,14 @@ int main(void)
 			printf("BuzzFizz ");
 			continue;
 		}
-		if (i % 5 == 0)
-		{
-			printf("Buzz ");
-			continue;
-		}
-		if(i % 3 == 0)
+		if (i % 3 == 0)
 		{
 			printf("Fizz ");
+			continue;
+		}
+		if(i % 5 == 0)
+		{
+			printf("Buzz ");
 			continue;
 		}
 		printf("%d ", i);
