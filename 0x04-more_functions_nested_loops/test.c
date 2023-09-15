@@ -18,9 +18,11 @@ int main(void)
 	printf("%d\n", mul(98, 1024));
 	printf("%d\n", mul(-402, 4096)); */
 
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(1);
+	print_number(98);
+	print_number(402);
+	print_number(1024);
+	print_number(0);
+	print_number(-98);
 
 
 	return (0);
