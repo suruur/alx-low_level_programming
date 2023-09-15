@@ -6,8 +6,9 @@
  */
 int main(void)
 {
-	long long maxp = -1;
-	long long n = 612852475143;
+	long maxp = -1;
+	long n = 612852475143;
+	long i;
 
 	while (n % 2 == 0)
 	{
@@ -15,7 +16,7 @@ int main(void)
 		n /= 2;
 	}
 
-	for (long long i = 3; i * i <= n; i += 2)
+	for (i = 3; i * i <= n; i += 2)
 	{
 		while (n % 2 == 0)
 		{
@@ -27,7 +28,7 @@ int main(void)
 	if (n > 2)
 		maxp = 2;
 
-	printf("%lld\n", maxp);
+	printf("%ld\n", maxp);
 
 	return (0);
 }
