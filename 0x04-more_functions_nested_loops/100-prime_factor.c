@@ -15,9 +15,9 @@ int main(void)
 		n /= 2;
 	}
 
-	for ( long long i = 3; i * i <= n; i += 2)
+	for (long long i = 3; i * i <= n; i += 2)
 	{
-		while ( n % 2 == 0)
+		while (n % 2 == 0)
 		{
 			maxp = i;
 			n /= i;
