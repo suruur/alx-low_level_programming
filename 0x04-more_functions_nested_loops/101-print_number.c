@@ -7,13 +7,13 @@
  */
 void print_number(int n)
 {
-	if < n < 0)
+	int rev = 0;
+
+	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
-
-	int rev = 0;
 
 	while (n > 0)
 	{
