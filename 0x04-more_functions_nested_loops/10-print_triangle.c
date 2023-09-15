@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - Entry point
- * @size: square size
+ * @size: triangle size
  * Return: void
  */
 void print_triangle(int size)
@@ -15,8 +15,10 @@ void print_triangle(int size)
 	{
 		for (k = 1; k > size - i; k++)
 			_putchar(' ');
+
 		for (j = 0; j <= i; j++)
 			_putchar('#');
+
 		_putchar('\n');
 	}
 	_putchar('\n');
