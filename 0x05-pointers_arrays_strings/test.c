@@ -56,11 +56,20 @@ int main(void)
 
 	ptr = _strcpy(s1, " First, solve the problem. Then, write the code\n");
 	printf("%s", s1);
-	printf("%s", ptr);*/
+	printf("%s", ptr);
 	char s[10] = "My School";
 	printf("%s\n", s);
 	rev_string(s);
-	printf("%s\n", s);
+	printf("%s\n", s);*/
+	int nb;
+
+
+	nb = _atoi("98");
+	printf("%d\n", nb);
+	nb = _atoi("-402");
+	printf("%d\n", nb);
+	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :");
+	printf("%d\n", nb);
 
 
 
