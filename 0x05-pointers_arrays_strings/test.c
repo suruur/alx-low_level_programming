@@ -25,7 +25,7 @@ int main(void)
 	print_number(-98); 
 
 
-	more_numbers();*/
+	more_numbers();
 	int a;
 	int b;
 
@@ -34,7 +34,12 @@ int main(void)
 
 	printf("a=%d, b=%d\n", a, b);
 	swap_int(&a, &b);
-	printf("a=%d, b=%d\n", a, b);
+	printf("a=%d, b=%d\n", a, b); */
+	char *str;
+	int len;
+	str = "My first strlen!";
+	len = _strlen(str);
+	printf("%d\n", len);
 
 	return (0);
 }
