@@ -34,14 +34,22 @@ int main(void)
 
 	printf("a=%d, b=%d\n", a, b);
 	swap_int(&a, &b);
-	printf("a=%d, b=%d\n", a, b); */
-	char *str;
+	printf("a=%d, b=%d\n", a, b); *
+	char *str;*/
 
 	/*str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	print_rev(str);*/
+	print_rev(str);
 	str = "0123456789";
 
-	puts_half(str);
+	puts_half(str);*/
+	int array[5];
+
+	array[0] = 98;
+	array[1] = 402;
+	array[2] = -198;
+	array[3] = 298;
+	array[4] = -1024;
+	print_array(array, 5);
 
 
 
