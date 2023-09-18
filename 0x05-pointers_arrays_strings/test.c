@@ -35,10 +35,14 @@ int main(void)
 	printf("a=%d, b=%d\n", a, b);
 	swap_int(&a, &b);
 	printf("a=%d, b=%d\n", a, b); */
-	char *str;
+	char s[10] = "My School";
 
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	print_rev(str);
+	/*str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+	print_rev(str);*/
+	printf("%s\n", s);
+	rev_string(s);
+	printf("%s\n", s);
+
 
 	return (0);
 }
