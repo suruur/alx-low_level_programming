@@ -10,14 +10,14 @@
 void reverse_array(int *a, int n)
 {
 	int i;
-	int len;
-	int dlen;
-	int cmp;
+	int j;
+	int tmp;
 
-	len = strlen(src);
-	dlen = strlen(dest);
+	for (i = 0, j = n - 1; i < j; i++, j--)
+	{
+		tmp = a[i];
+		a[i] = a[j];
+		a[j] = tmp;
+	}
 
-	for (i = 0; i < len && src[i] != '\0'; i++)
-		dest[dlen + i] = src[i];
-	dest[dlen + i] = '\0';
 }
