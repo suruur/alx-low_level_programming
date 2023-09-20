@@ -86,12 +86,16 @@ int main(void)
 	printf("%s", s1);
 	printf("%s", s2);
 	printf("%s", ptr);*/
-	char str[] = "Look up!\n";
-	char *ptr;
+	char s[] = "Expect the best. Prepare for the worst.";
+	char *p;
 
+	p = leet(s);
+	printf("%s", p);
+	printf("%s", s);
+	/*
 	ptr = string_toupper(str);
 	printf("%s", ptr);
-	printf("%s", str);
+	printf("%s", str);*/
 	/*
 	printf("%d\n", _strcmp(s1, s2));
 	printf("%d\n", _strcmp(s2, s1));

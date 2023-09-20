@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * string_toupper - concat string.
@@ -16,10 +17,8 @@ char *string_toupper(char *a)
 	len = strlen(a);
 
 	for (i = 0; i < len; i++)
-	{
-		if (a[i] <= 'a' && a[i] >= 'z')
-			a[i] = a[i] - 32;
-	}
+		if (a[i] >= 'a' && a[i] <= 'z')
+			a[i] = toupper((unsigned char)a[i]);
 
 	return (a);
 }
