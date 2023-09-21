@@ -17,7 +17,7 @@ char *cap_string(char *a);
 
 char *leet(char *str);
 
-
+char *rot13(char *str);
 
 
 
