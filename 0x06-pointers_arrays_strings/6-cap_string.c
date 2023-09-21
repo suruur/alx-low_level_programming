@@ -4,12 +4,12 @@
 #include <ctype.h>
 
 /**
- * string_toupper - concat string.
+ * cap_string - concat string.
  * @a: string pointer
  * Return: string
  */
 
-char *string_toupper(char *a)
+char *cap_string(char *a)
 {
 	int i;
 	int len;
