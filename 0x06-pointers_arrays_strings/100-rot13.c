@@ -9,7 +9,6 @@
 char *rot13(char *str)
 {
 	int i;
-	int j;
 	char c, base;
 
 
