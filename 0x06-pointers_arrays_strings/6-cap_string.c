@@ -14,7 +14,8 @@ char *cap_string(char *a)
 	int i;
 	int len;
 
-	len = strlen(a);
+	if (!a)
+		len = strlen(a);
 
 	for (i = 0; i < len; i++)
 		if (
