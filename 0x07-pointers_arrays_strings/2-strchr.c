@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * _strchr - concat string.
@@ -8,11 +9,15 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (c == '\0')
+		return (s);
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	return (NULL);
 
-
-	return (s);
 }
