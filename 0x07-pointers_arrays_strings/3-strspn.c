@@ -4,15 +4,25 @@
  * _strspn - concat string.
  * @s: string pointer
  * @accept: filling char
- * Return:  unsigned int 
+ * Return:  unsigned int
  */
-char *_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
+	unsigned int c;
+	int isacc[256] = {0};
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	c = 0;
 
+	while (*accept)
+	{
+		isacc[(unsigned char)*accept] = 1;
+		accept++;
+	}
+	while (*s && isacc[(unsigned char)*s])
+	{
+		c++;
+		s++;
+	}
 
-	return (s);
+	return (c);
 }
