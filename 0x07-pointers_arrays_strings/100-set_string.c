@@ -12,10 +12,13 @@ void set_string(char **s, char *to)
 {
 	char *newstr;
 
-	newstr = malloc(strlen(to) + 1);
+	if (s != NULL)
+	{
+		newstr = malloc(strlen(to) + 1);
 
-	strcpy(newstr, to);
+		strcpy(newstr, to);
 
-	*s = newstr;
+		*s = newstr;
+	}
 
 }
