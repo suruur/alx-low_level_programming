@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * _strstr - concat string.
@@ -8,11 +9,25 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i;
+	char *hsp, *nd;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	hsp = haystack;
+	nd = needle;
 
+	if (*needle == '\0')
+		return (haystack);
 
-	return (s);
+	while (*haystack != '\0')
+	{
+		while (*hsp != '\0' && *nd != '\0' && *hsp == *nd)
+		{
+			hsp++;
+			nd++;
+		}
+		if (*nd == '\0')
+			return (haystack);
+		haystack++;
+	}
+
+	return (NULL);
 }
