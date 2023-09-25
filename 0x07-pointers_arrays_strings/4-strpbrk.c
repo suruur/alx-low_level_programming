@@ -1,19 +1,30 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _strpbrk - concat string.
  * @s: string pointer
- * @b: filling char
- * @n: int length
+ * @accept: string
  * Return:  pointer
  */
-char *_strpbrk(char *s, char accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i;
+	char *a;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	a = accept;
 
+	if (s == NULL || accept == NULL)
+		return (NULL);
 
-	return (s);
+	while (*s)
+	{
+		while (*a)
+		{
+			if (*s == *a)
+				return (s);
+			a++;
+		}
+		s++;
+	}
+
+	return (NULL);
 }
