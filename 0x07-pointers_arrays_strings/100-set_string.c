@@ -16,7 +16,8 @@ void set_string(char **s, char *to)
 	{
 		newstr = malloc(strlen(to) + 1);
 
-		strcpy(newstr, to);
+		if (newstr != NULL)
+			strcpy(newstr, to);
 
 		*s = newstr;
 	}
