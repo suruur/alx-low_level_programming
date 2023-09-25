@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _mecpy - concat string.
+ * _memcpy - copy string.
  * @dest: string pointer
  * @src: filling char
  * @n: unsigned int length
@@ -9,11 +9,12 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	char *dd;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	dd = dest;
 
+	while (n--)
+		*dest++ = *src++;
 
-	return (s);
+	return (dd);
 }
