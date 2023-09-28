@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * _memset - concat string.
+ * _strlen_recursion - return length.
  * @s: string pointer
- * @b: filling char
- * @n: int length
- * Return:  pointer
+ * Return: int
  */
-char *_memset(char *s, char b, unsigned int n)
+int _strlen_recursion(char *s)
 {
-	unsigned int i;
+	if (*s == '\0')
+	{
+		return (0);
+	}
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
-
-
-	return (s);
+	return ((1) + _strlen_recursion(s + 1));
 }
