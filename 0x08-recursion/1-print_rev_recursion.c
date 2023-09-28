@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _memset - concat string.
+ * _print_rev_recursion - prints string.
  * @s: string pointer
- * @b: filling char
- * @n: int length
- * Return:  pointer
+ * Return: void
  */
-char *_memset(char *s, char b, unsigned int n)
+void _print_rev_recursion(char *s)
 {
-	unsigned int i;
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	_puts_recursion(s + 1);
 
-
-	return (s);
+	_putchar(*s);
 }
