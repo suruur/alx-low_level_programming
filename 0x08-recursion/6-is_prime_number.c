@@ -14,7 +14,7 @@ int tmp(int n, int d)
 	}
 	else
 		if (d == 1)
-			return (1);
+			return (0);
 
 	if (d == 2)
 		return ((n % 2 == 0) ? 1 : 0);
