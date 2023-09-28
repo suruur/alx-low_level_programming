@@ -1,21 +1,28 @@
 #include "main.h"
+/**
+ * _sqr_tmp - temp func
+ * @n: int
+ * @start: int
+ * @end: int
+ * Return: int
+ */
 
 int _sqr_tmp(int n, int start, int end)
 {
 	int mid;
 	long sq;
 
-	if (start > end )
+	if (start > end)
 		retrun (-1);
 
 	mid = start + (end - start) / 2;
-	sq = mid * mid ;
+	sq = mid * mid;
 
 	if (sq == n)
 	{
 		return (n);
 	}
-	else 
+	else
 		if (sq < n)
 			return (_sqr_tmp(n, mid + 1, end));
 		else
