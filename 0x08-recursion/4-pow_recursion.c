@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
- * _memset - concat string.
- * @s: string pointer
- * @b: filling char
- * @n: int length
- * Return:  pointer
+ * _pow_recursion - return length.
+ * @x: int number
+ * @y: int number
+ * Return: int
  */
-char *_memset(char *s, char b, unsigned int n)
+int _pow_recursion(int x, int y)
 {
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		s[i] = b;
-
-
-	return (s);
+	if (y < 0)
+	{
+		return (-1);
+	}
+	else
+		if (y == 0)
+		{
+			return (1);
+		}
+		else
+			return ((x) * _pow_recursion(x, y - 1));
 }
