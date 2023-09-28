@@ -16,6 +16,9 @@ int tmp(int n, int d)
 		if (d == 1)
 			return (1);
 
+	if (d == 2)
+		return ( (n % 2 == 0) ? 1 : 0);
+
 	if (n % d == 0)
 		return (1);
 
