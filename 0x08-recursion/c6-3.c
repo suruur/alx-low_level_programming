@@ -8,13 +8,22 @@
 
 int tmp(int n, int d)
 {
-	if (d <= 1)
+	if (n <= 1)
+	{
 		return (0);
+	}
+	else
+		if (d == 1)
+			return (0);
+
+	if (d == 2)
+		return ((n % 2 == 0) ? 1 : 0);
 
 	if (n % d == 0)
 		return (1);
 
-	return (tmp(n, d - 1));
+	return (tmp(n, n - 1));
+
 }
 /**
  * is_prime_number - checks if n is prime or not
@@ -24,9 +33,5 @@ int tmp(int n, int d)
 
 int is_prime_number(int n)
 {
-	if (n <= 1)
-		return (0);
-
-	max = (int)sqrt(n);
-	return (!tmp(n, max));
+	return (tmp(n, n - 1));
 }
