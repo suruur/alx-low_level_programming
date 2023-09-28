@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * tmp - tmp
  * @n: int
@@ -24,6 +25,8 @@ int tmp(int n, int d)
 
 int is_prime_number(int n)
 {
+	int max;
+
 	if (n <= 1)
 		return (0);
 
