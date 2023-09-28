@@ -1,33 +1,25 @@
 #include "main.h"
+
 /**
  * tmp - temp func
  * @n: int
- * @start: int
- * @end: int
+ * @g: int
  * Return: int
  */
 
-int tmp(int n, int start, int end)
+int tmp(int n, int g)
 {
-	int mid;
-	long sq;
-
-	if (start > end)
-		retrun(-1);
-
-	mid = start + (end - start) / 2;
-	sq = mid * mid;
-
-	if (sq == n)
+	if (g * g == n)
 	{
-		return (n);
+		return (g);
 	}
 	else
-		if (sq < n)
-			return (tmp(n, mid + 1, end));
+		if (g * g > n)
+		{
+			return (-1);
+		}
 		else
-			return (tmp(n, start, mid - 1));
-
+			return (tmp(n, g + 1));
 }
 
 /**
@@ -38,7 +30,16 @@ int tmp(int n, int start, int end)
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
+	{
 		return (-1);
-
-	return (tmp(n, 0, n));
+	}
+	else
+		if (n == 0 || n == 1)
+		{
+			return (1);
+		}
+		else
+		{
+			return (tmp(n, 1));
+		}
 }
