@@ -17,10 +17,10 @@ int tmp(int n, int d)
 			return (1);
 
 	if (d == 2)
-		return ((n % 2 == 0) ? 0 : 1);
+		return ((n % 2 == 0) ? 1 : 0);
 
 	if (n % d == 0)
-		return (0);
+		return (1);
 
 	return (tmp(n, n - 1));
 
