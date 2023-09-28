@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- * _sqr_tmp - temp func
+ * tmp - temp func
  * @n: int
  * @start: int
  * @end: int
  * Return: int
  */
 
-int _sqr_tmp(int n, int start, int end)
+int tmp(int n, int start, int end)
 {
 	int mid;
 	long sq;
 
 	if (start > end)
-		retrun (-1);
+		retrun(-1);
 
 	mid = start + (end - start) / 2;
 	sq = mid * mid;
@@ -24,9 +24,9 @@ int _sqr_tmp(int n, int start, int end)
 	}
 	else
 		if (sq < n)
-			return (_sqr_tmp(n, mid + 1, end));
+			return (tmp(n, mid + 1, end));
 		else
-			return (_sqr_tmp(n, start, mid - 1));
+			return (tmp(n, start, mid - 1));
 
 }
 
@@ -40,5 +40,5 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 
-	return (_sqr_tmp(n, 0, n));
+	return (tmp(n, 0, n));
 }
