@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * is_primee - tmp
+ * tmp - tmp
  * @n: int
  * @d: int
  * Return: int
  */
 
-int is_primee(int n, int d)
+int tmp(int n, int d)
 {
 	if (n <= 1)
 	{
@@ -19,7 +19,7 @@ int is_primee(int n, int d)
 	if (n % d == 0)
 		return (0);
 
-	return (is_primee(n, n - 1));
+	return (tmp(n, n - 1));
 
 }
 /**
@@ -30,5 +30,5 @@ int is_primee(int n, int d)
 
 int is_prime_number(int n)
 {
-	return (is_primee(n, n - 1));
+	return (tmp(n, n - 1));
 }
