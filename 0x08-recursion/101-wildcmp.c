@@ -1,19 +1,21 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints string.
- * @s: string pointer
- * Return: void
+ * wildcmp - prints string.
+ * @s1: string pointer
+ * @s2: string
+ * Return: int
  */
-void _puts_recursion(char *s)
+int wildcmp(char *s1, char *s2)
 {
-	if (*s == '\0')
+	if (*s1 == '\0' && *s2 == '\0')
 	{
-		_putchar('\n');
-		return;
+		return (1);
 	}
 
-	_putchar(*s);
+	if (*s1 == *s2 || *s2 == '*')
+		return (wildcmp(s1 + 1, s2 + 1) || wildcmp(s1 + 1, s2)
+				|| wildcmp(s1, s2 + 1));
 
-	_puts_recursion(s + 1);
+	return (0);
 }
