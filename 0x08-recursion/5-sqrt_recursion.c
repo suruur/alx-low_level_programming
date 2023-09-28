@@ -1,19 +1,37 @@
 #include "main.h"
 
-/**
- * _memset - concat string.
- * @s: string pointer
- * @b: filling char
- * @n: int length
- * Return:  pointer
- */
-char *_memset(char *s, char b, unsigned int n)
+int _sqr_tmp(int n, int start, int end)
 {
-	unsigned int i;
+	int mid;
+	long sq;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	if (start > end )
+		retrun (-1);
 
+	mid = start + (end - start) / 2;
+	sq = mid * mid ;
 
-	return (s);
+	if (sq == n)
+	{
+		return (n);
+	}
+	else 
+		if (sq < n)
+			return (_sqr_tmp(n, mid + 1, end));
+		else
+			return (_sqr_tmp(n, start, mid - 1));
+
+}
+
+/**
+ * _sqrt_recursion - finds sqrt
+ * @n: int num
+ * Return:  int
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+
+	return (_sqr_tmp(n, 0, n));
 }
