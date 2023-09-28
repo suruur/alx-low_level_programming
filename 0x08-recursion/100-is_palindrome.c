@@ -1,19 +1,30 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints string.
+ * is_palindrome - prints string.
  * @s: string pointer
- * Return: void
+ * Return: int
  */
-void _puts_recursion(char *s)
+int is_palindrome(char *s)
 {
-	if (*s == '\0')
+	int len;
+
+
+	if (strlen(s) <= 1)
 	{
-		_putchar('\n');
-		return;
+		return (1);
+	}
+	else
+		len = strlen(s);
+
+	if (s[0] != s[len - 1])
+	{
+		return (0);
+	}
+	else
+	{
+		s[len - 1] = '\0';
+		return (is_palindrome(s + 1));
 	}
 
-	_putchar(*s);
-
-	_puts_recursion(s + 1);
 }
