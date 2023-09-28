@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * _memset - concat string.
- * @s: string pointer
- * @b: filling char
- * @n: int length
- * Return:  pointer
+ * factorial - return length.
+ * @n: int number
+ * Return: int
  */
-char *_memset(char *s, char b, unsigned int n)
+int factorial(int n)
 {
-	unsigned int i;
+	if (n == 1)
+		return (1);
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
+	if (n < 0)
+		return (-1);
 
 
-	return (s);
+	return ((n) * factorial(n - 1));
 }
