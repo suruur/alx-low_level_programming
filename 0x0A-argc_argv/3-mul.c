@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	res = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", res)
+	printf("%d\n", res);
 
 	return (0);
 
