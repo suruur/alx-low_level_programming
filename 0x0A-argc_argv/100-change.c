@@ -9,10 +9,10 @@
 
 int minCo(int cents)
 {
-	int coins[5];
 	int num, count, i;
 
-	coins[] = {25, 10, 5, 2, 1};
+	int coins[] = {25, 10, 5, 2, 1};
+
 	num = sizeof(coins) / sizeof(coins[0]);
 	count = 0;
 
