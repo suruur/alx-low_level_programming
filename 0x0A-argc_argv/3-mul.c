@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 /**
  * main - Entry point
  * @argc: args size
@@ -8,8 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 0)
-		printf("%s\n", argv[0]);
+	int res;
+
+	if (argc > 1)
+	{
+		res = atoi(argv[1]) * atoi(argv[2]);
+
+		printf("%d\n", res);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	return (0);
 }
