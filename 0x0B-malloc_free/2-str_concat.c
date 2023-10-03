@@ -3,8 +3,9 @@
 #include <string.h>
 
 /**
- * strconcat - creates array
- * @str: array size
+ * _strconcat - creates array
+ * @s1: array size
+ * @s2: str
  * Return: array
  */
 char *_strconcat(char *s1, char *s2)
