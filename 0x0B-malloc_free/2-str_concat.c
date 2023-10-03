@@ -3,12 +3,12 @@
 #include <string.h>
 
 /**
- * _strconcat - creates array
+ * str_concat - creates array
  * @s1: array size
  * @s2: str
  * Return: array
  */
-char *_strconcat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int l1, l2;
 	char *res;
