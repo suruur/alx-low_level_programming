@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates array
- * @size: array size
- * @c: first char
+ * argstostr - creates array
+ * @ac: array size
+ * @av: first char
  * Return: array
  */
 char *create_array(unsigned int size, char c)

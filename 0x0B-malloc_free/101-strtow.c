@@ -2,12 +2,11 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates array
- * @size: array size
- * @c: first char
+ * strtow- creates array
+ * @str: array size
  * Return: array
  */
-char *create_array(unsigned int size, char c)
+char **strtow(char *str)
 {
 	unsigned int i;
 	char *arr;

@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates array
- * @size: array size
- * @c: first char
- * Return: array
+ * free_grid - creates array
+ * @grid: array size
+ * @height: first char
+ * Return: void
  */
-char *create_array(unsigned int size, char c)
+void free_grid(int **grid, int height)
 {
 	unsigned int i;
 	char *arr;
