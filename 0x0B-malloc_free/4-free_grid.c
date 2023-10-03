@@ -3,27 +3,38 @@
 
 /**
  * free_grid - creates array
- * @grid: array size
+ * @width: array size
  * @height: first char
- * Return: void
+ * Return: array
  */
-void free_grid(int **grid, int height)
+int **alloc_grid(int width, int height)
 {
-	unsigned int i;
-	char *arr;
+	int i, j;
+	int **grid;
 
-	if (size == 0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	arr = malloc(size);
-	if (arr)
+	grid = (int **)malloc(height * sizeof(int *));
+
+	if (!grid)
+		return (NULL);
+
+	for (i = 0; i < height; i++)
 	{
-		for (i = 0; i < size; i++)
-			arr[i] = c;
+		grid[i] = (int *)malloc(width * sizeof(int));
+
+		if (grid[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+				free(grid[j]);
+			free(grid);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
 	}
-	else
-		return (NULL);
 
+	return (grid);
 
-	return (arr);
 }
