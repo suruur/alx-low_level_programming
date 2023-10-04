@@ -29,14 +29,16 @@ char *argstostr(int ac, char **av)
 	res = (char *)malloc(t + 1);
 
 	if (res == NULL)
+	{
 		return (NULL);
+	}
 	else
 		for (i = 0; i < ac; i++)
 		{
-			 strcpy(res + cp, av[i]);
-		 	cp += strlen(av[i]);
-			 res[cp] = '\n';
-		 	cp++;
+			strcpy(res + cp, av[i]);
+			cp += strlen(av[i]);
+			res[cp] = '\n';
+			cp++;
 		}
 
 	res[t] = '\0';
