@@ -2,6 +2,45 @@
 #include <stdlib.h>
 #include <string.h>
 
+int countW(char *str)
+{
+	int c, isW;
+
+	c = 0;
+	isW =0;
+
+	while (*str)
+	{
+		if (*str == ' ')
+		{
+			isW = 0;
+		}
+		else
+			if (!isW)
+			{
+				isW = 1;
+				c++;
+			}
+		str++;
+	}
+
+	return (c);
+}
+
+void freeW(char **words)
+{
+	int i;
+
+	if(words)
+	{
+		for (i = 0; words[i]; i++)
+		{
+			free(words[i]);
+		}
+		free(words);
+	}
+}
+
 /**
  * strtow- creates array
  * @str: array size
@@ -9,70 +48,63 @@
  */
 char **strtow(char *str)
 {
-	int nw, n, i, wl;
-	char *tmp;
+	int nW, wI, wS, wL, i;
 	char **words;
 
-	nw = 0;
-	n = 0;
-	tmp = str;
+	nW = countW(str);
+	wL = 0;
+	wS = 0;
+	wI = 0;
+
+	words = (char **)malloc((nW + 1) * sizeof(char *));
+
+	if (words == NULL)
+		return (NULL);
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	while (*tmp != '\0')
+	for (i = 0; i < str[i]; i++)
 	{
-		while (*tmp == ' ')
+		if (str[i] == ' ')
 		{
-			tmp++;
-		}
-		if (*tmp != '\0')
-		{
-			nw++;
-		}
-		while (*tmp != ' ' && *tmp != '\0')
-		{
-			tmp++;
-		}
-	}
-	words = (char **)malloc((nw + 1) * sizeof(char *));
-
-	if (words == NULL)
-		return (NULL);
-	tmp = str;
-
-	while (*tmp != '\0')
-	{
-		while (*tmp == ' ')
-		{
-			tmp++;
-		}
-		if (*tmp != '\0')
-		{
-			char *ws = tmp;
-
-			while (*tmp != ' ' && *tmp != '\0')
+			if (wL > 0)
 			{
-				tmp++;
+				words[wI] = (char *)malloc((wL + 1) * sizeof(char *));
+				
+				if (words[wI] == NULL)
+				{
+					freeW(words);
+					return (NULL);
+				}
+				strncpy(words[wI], &str[wS], wL);
+				words[wI][wL] = '\0';
+				wL++;
 			}
-			wl = tmp - ws;
-
-			words[n] = (char *)malloc((wl + 1) * sizeof(char));
-
-			if (words[n] == NULL)
+		}
+		else
+		{
+			if (wL == 0)
 			{
-				for (i = 0; i < n; i++)
-					free(words[i]);
-				free(words);
+				wS = i;
+			}
+			wL++;
+		}
+		if (wL > 0)
+		{
+			words[wI] = (char *)malloc((wL + 1) * sizeof(char *));
+
+			if (words == NULL)
+			{
+				freeW(words);
 				return (NULL);
 			}
-			strncpy(words[nw], ws, wl);
-			words[nw][wl] = '\0';
-			nw++;
+			strncpy(words[wI], &str[wS], wL);
+			words[wI][wL] = '\0';
+			wI++;
 		}
 	}
-	words[n] = NULL;
-
-	return (words);
-
+		words[wI] = NULL;
+	
+		return (NULL);
 }
