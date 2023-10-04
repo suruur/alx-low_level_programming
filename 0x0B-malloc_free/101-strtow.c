@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * strtow- creates array
@@ -8,7 +9,7 @@
  */
 char **strtow(char *str)
 {
-	int nw, n, i;
+	int nw, n, i, wl;
 	char *tmp;
 	char **words;
 
@@ -54,7 +55,7 @@ char **strtow(char *str)
 			{
 				tmp++;
 			}
-			int wl = tmp - ws;
+			wl = tmp - ws;
 
 			words[n] = (char *)malloc((wl + 1) * sizeof(char));
 
@@ -65,9 +66,9 @@ char **strtow(char *str)
 				free(words);
 				return (NULL);
 			}
-			strncpy(words[wn], ws, wl);
-			words[wn][wl] = '\0';
-			wn++;
+			strncpy(words[nw], ws, wl);
+			words[nw][wl] = '\0';
+			nw++;
 		}
 	}
 	words[n] = NULL;
