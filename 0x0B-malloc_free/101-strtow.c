@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 
+int issp(char c)
+{
+	return (( c == ' ' || c == '\t' || c == '\n' || c == '\r'));
+}
 /**
  * strtow- creates array
  * @str: array size
@@ -8,20 +12,29 @@
  */
 char **strtow(char *str)
 {
-	unsigned int i;
-	char *arr;
+	int nw, n, i;
 
-	if (size == 0)
+	nw = 0;
+	n = 0;
+
+	if (str == NULL || str == '\0')
 		return (NULL);
 
-	arr = malloc(size);
-	if (arr)
-	{
-		for (i = 0; i < size; i++)
-			arr[i] = c;
-	}
-	else
+	for (i = 0; str[i] != '\0'; i++)
+		if (!issp(str[i]))
+		{
+			if (!n)
+			{
+				n++;
+				nw++;
+			}
+		else
+		{
+			n = 0;
+		}
+	if (nw == 0)
 		return (NULL);
+	char 
 
 
 	return (arr);
