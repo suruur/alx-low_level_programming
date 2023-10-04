@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * argstostr - creates array
@@ -7,23 +8,38 @@
  * @av: first char
  * Return: array
  */
-char *create_array(unsigned int size, char c)
+char *argstostr(int ac, char **av)
 {
-	unsigned int i;
-	char *arr;
+	int t, i, cp;
+	char *res;
 
-	if (size == 0)
-		return (NULL);
+	t = 0;
+	cp = 0;
 
-	arr = malloc(size);
-	if (arr)
+	if (ac == 0 || av == NULL)
 	{
-		for (i = 0; i < size; i++)
-			arr[i] = c;
+		return (NULL);
 	}
 	else
+		for (i = 0; i < ac; i++)
+		{
+			t += strlen(av[i]) + 1;
+		}
+
+	res = (char *)malloc(t + 1);
+
+	if (res == NULL)
 		return (NULL);
+	else
+		for (i = 0; i < ac; i++)
+		{
+			 strcpy(res + cp, av[i]);
+		 	cp += strlen(av[i]);
+			 res[cp] = '\n';
+		 	cp++;
+		}
 
+	res[t] = '\0';
 
-	return (arr);
+	return (res);
 }
