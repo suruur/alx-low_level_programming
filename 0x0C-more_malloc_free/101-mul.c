@@ -26,11 +26,12 @@ char *mull(char *n1, char *n2)
 		exit(1);
 	}
 
-	memset(res, 0, l3);
+	for (i = 0; i < l3; i++)
+		res[i] = '0';
 
 	res[l3] = '\0';
 
-	/**
+
 	for (i = l1 - 1; i >= 0; i--)
 	{
 		c = 0;
@@ -42,7 +43,6 @@ char *mull(char *n1, char *n2)
 		}
 		res[i] += c;
 	}
-	*/
 
 	return (res);
 }
