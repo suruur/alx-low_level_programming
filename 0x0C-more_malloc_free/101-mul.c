@@ -19,7 +19,7 @@ char *mull(char *n1, char *n2)
 	l2 = strlen(n2);
 	l3 = l1 + l2;
 
-	res = (char *)malloc(l3 + 1);
+	res = (char *)malloc(l3 + 2);
 
 	if (res == NULL)
 	{
@@ -56,12 +56,12 @@ char *mull(char *n1, char *n2)
 int main(int argc, char *argv[])
 {
 	int i;
-	char *num1, *num2, *res;
+	char *num1, *num2, *mul;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
 	num1 = argv[1];
@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
 		if (!isdigit(num1[i]))
 		{
 			printf("Error\n");
-			return (98);
+			exit(98);
 		}
 	}
 	for (i = 0; num2[i]; i++)
@@ -82,9 +82,9 @@ int main(int argc, char *argv[])
 			return (98);
 		}
 
-	res = mull(num1, num2);
-	printf("%s\n", res);
-	free(res);
+	mul = mull(num1, num2);
+	printf("%s\n", mul);
+	free(mul);
 
 	return (0);
 }
