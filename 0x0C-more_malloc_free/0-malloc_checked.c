@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * malloc_checked- creates array
@@ -14,7 +15,7 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		free(ptr);
+		fprintf(stderr, "Memory allocation failed\n");
 		exit(98);
 	}
 
