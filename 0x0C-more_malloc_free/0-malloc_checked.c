@@ -4,7 +4,7 @@
 /**
  * malloc_checked- creates array
  * @b: array size
- * Return: array
+ * Return: any ptr
  */
 void *malloc_checked(unsigned int b)
 {
@@ -12,10 +12,8 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		return(NULL);
 		exit(98);
 	}
 
 	return (ptr);
-
 }
