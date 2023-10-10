@@ -1,5 +1,5 @@
-#ifndef "0-object-like_macro.h"
-#define "0-object_like_macro.h"
+#ifndef ZERO_PI
+#define ZERO_PI
 
 #define SIZE 1024
 
