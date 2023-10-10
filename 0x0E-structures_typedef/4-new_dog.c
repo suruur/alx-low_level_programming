@@ -12,20 +12,16 @@
  */
 dog_t new_dog(char *name, float age, char *owner)
 {
-	char *nm, *ow;
-	dog_t dogg;
+	dog_t d;
 
-	strcpy(nm, name);
-	strcpy(ow, owner);
+	d = (dog_t *)malloc(sizeof(dog_t));
 
-	if (dogg)
-	{
-		dogg.name = name;
-		dogg.age = age;
-		dogg.owner = owner;
-	}
-	else
+	if (d == NULL)
 		return (NULL);
 
-	return (dogg);
+	d->age = age;
+	strcpy(d->name, name);
+	strcpy(d->owner, owner);
+
+	return (d);
 }
