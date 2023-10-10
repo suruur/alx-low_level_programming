@@ -10,9 +10,10 @@
  * @owner: owner
  * Return: dog_t
  */
-dog_t new_dog(char *name, float age, char *owner)
+
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t d;
+	dog_t *d;
 
 	d = (dog_t *)malloc(sizeof(dog_t));
 
