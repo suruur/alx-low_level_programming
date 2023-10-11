@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * get_op_func - 
+ * get_op_func - options fun
  * @s: se
  * Return: P to F
  */
@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	while ( ops[i].op)
+	while (ops[i].op)
 	{
 		if (*(ops[i].op) == *s && s[1] == '\0')
 		{
