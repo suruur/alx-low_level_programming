@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < num_b; i++)
 	{
 		printf("%02dx", ptr[i]);
-		if (i < num_b - 1)
+		if ( i < num_b - 1)
 			printf(" ");
 	}
 
