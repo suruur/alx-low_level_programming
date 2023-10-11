@@ -3,11 +3,11 @@
 #include "3-calc.h"
 
 /**
- * main - entry
+ * main - Entry point
  * @argc: size
  * @argv: values
  *
- * @Return: 0 if success, 98, 99, something esle otherwise..
+ * Return: 0 if success, 98, 99, something esle otherwise..
  */
 
 int main(int argc, char *argv[])
