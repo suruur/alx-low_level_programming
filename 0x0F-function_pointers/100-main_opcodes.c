@@ -31,7 +31,11 @@ int main(int argc, char *argv[])
 	ptr = (unsigned char *)main;
 
 	for (i = 0; i < num_b; i++)
-		printf("%02dx ", ptr[i]);
+	{
+		printf("%02dx", ptr[i]);
+		if ( i < num_b - 1)
+			printf(" ");
+	}
 
 	printf("\n");
 
