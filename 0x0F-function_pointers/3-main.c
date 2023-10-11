@@ -6,8 +6,10 @@
  * main - entry
  * @argc: size
  * @argv: values
- * @Return: Always 0.
+ *
+ * @Return: 0 if success, 98, 99, something esle otherwise..
  */
+
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
@@ -31,6 +33,7 @@ int main(int argc, char *argv[])
 
 	result = op_func(num1, num2);
 	printf("%d\n", result);
+
 
 	return (0);
 }
