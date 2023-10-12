@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * print_all - print name
@@ -15,48 +16,50 @@ void print_all(const char * const format, ...)
 	char c;
 	float f;
 	char *s;
-	char *nil = "(nil)";
+	int i;
 	va_list args;
-
-	int i = 0;
+	char *ff;
 
 	va_start(args, format);
+	ff = malloc(strlen(format + 1));
 
-	while (format[i])
+	strcpy(ff, format);
+
+	while (*ff)
 	{
-		if (format[i] == 'c')
+		if (*ff == 'c')
 		{
 			c = va_arg(args, int);
 			printf("%c", c);
 		}
 		else
-			if (format[i] == 'i')
+			if (*ff == 'i')
 			{
 				i = va_arg(args, int);
 				printf("%d", i);
 			}
 			else
-				if (format[i] == 'f')
+				if (*ff == 'f')
 				{
 					f = va_arg(args, double);
 					printf("%f", f);
 				}
 				else
-					if (format[i] == 's')
+					if (*ff == 's')
 					{
 						s = va_arg(args, char *);
 						if (s == NULL)
 						{
-							printf("%s", nil);
+							printf("(nil)");
 						}
 						else
 						{
 							printf("%s", s);
 						}
 					}
-		i++;
+		ff++;
 
-		if (*format)
+		if (*ff)
 		{
 			printf(", ");
 		}
