@@ -1,55 +1,60 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_all - print name
- * @format: name
+ * @format: namei
  * @: p to function
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
+
 	char c;
-	int i;
 	float f;
 	char *s;
+	char *nil = "(nil)";
 	va_list args;
+
+	int i = 0;
 
 	va_start(args, format);
 
-	while (*format)
+	while (format[i])
 	{
-		if (*format == 'c')
+		if (format[i] == 'c')
 		{
 			c = va_arg(args, int);
 			printf("%c", c);
 		}
 		else
-			if (*format == 'i')
+			if (format[i] == 'i')
 			{
 				i = va_arg(args, int);
 				printf("%d", i);
 			}
 			else
-				if (*format == 'f')
+				if (format[i] == 'f')
 				{
 					f = va_arg(args, double);
 					printf("%f", f);
 				}
 				else
-					if (*format == 's')
+					if (format[i] == 's')
 					{
 						s = va_arg(args, char *);
 						if (s == NULL)
 						{
-							printf("(nil)");
+							printf("%s", nil);
 						}
 						else
 						{
 							printf("%s", s);
 						}
 					}
-		format++;
+		i++;
 
 		if (*format)
 		{
