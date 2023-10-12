@@ -1,15 +1,15 @@
-#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "variadic_functions.h"
 /**
- * print_number - print name
+ * print_numbers - print name
  * @separator: sep
  * @n: name
  * @: p to function
  * Return: void
  */
-void print_number(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	int num;
