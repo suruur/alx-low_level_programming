@@ -2,28 +2,61 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - print name
- * @n: name
+ * print_all - print name
+ * @format: name
  * @: p to function
  * Return: void
  */
-int sum_them_all(const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-	int sum = 0;
-	unsigned int i;
+	char c;
+	int i;
+	float f;
+	char *s;
 	va_list args;
 
-	if (n == 0)
-		return (0);
+	va_start(args, format);
 
-	va_start(args, n);
+	while (*format)
+	{
+		if (*format == 'c')
+		{
+			c = va_arg(args, int);
+			printf("%c", c);
+		}
+		else
+			if (*format == 'i')
+			{
+				i = va_arg(args, int);
+				printf("%d", i);
+			}
+			else
+				if (*format == 'f')
+				{
+					f = va_arg(args, double);
+					printf("%f", f);
+				}
+				else
+					if (*format == 's')
+					{
+						s = va_arg(args, char *);
+						if (s == NULL)
+						{
+							printf("(nil)");
+						}
+						else
+						{
+							printf("%s", s);
+						}
+					}
+		format++;
 
-
-	for (i = 0; i < n; i++)
-		sum += va_arg(args, int);
+		if (*format)
+		{
+			printf(", ");
+		}
+	}
 
 	va_end(args);
-
-	return (sum);
-
+	printf("\n");
 }
