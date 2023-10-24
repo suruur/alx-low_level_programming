@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -8,19 +9,35 @@
  * Return: size_t
  */
 
-int delete_nodeint_at_index(listint_t *head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	size_t count;
+	listint_t *current, *tmp, *prev;
+	unsigned int i;
 
-
-	count = 0;
-
-	while (h != NULL)
+	if (*head == NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count++;
+		return (-1);
 	}
+	if (index == 0)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
+		return (1);
+	}
+	current = *head;
+	prev = NULL;
 
-	return (count);
+	for (i = 0; i < index; i++)
+	{
+		if (current->next == NULL)
+		{
+			return (-1);
+		}
+		prev = current;
+		current = current->next;
+	}
+	prev->next = current->next;
+	free(current);
+	return (1);
 }
