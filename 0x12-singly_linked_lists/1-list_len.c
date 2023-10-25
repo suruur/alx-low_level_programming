@@ -11,13 +11,8 @@
 size_t list_len(const list_t *h)
 {
 	size_t count;
-	list_t *current;
 
-
-	count = 0;
-	current = (void *)h;
-
-	while (current != NULL)
+	while (h != NULL)
 	{
 		count++;
 		h = h->next;
