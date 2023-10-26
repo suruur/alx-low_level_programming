@@ -2,20 +2,21 @@
 #include <stdio.h>
 #include"main.h"
 /**
- * get_bit - convert
+ * clear_bit - convert
  * @n: int
  * @index: index
  * Return: int
  */
-int get_bit(unsigned long int n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int bit_val;
+	unsigned long int mask;
 
-	if (index > 63)
+	if (index >= sizeof(unsigned long int) * 8)
 	{
 		return (-1);
 	}
-	bit_val = (n >> index) & 1;
+	mask = 1UL << index;
+	*n = *n & ~mask;
 
-	return (bit_val);
+	return (1);
 }
