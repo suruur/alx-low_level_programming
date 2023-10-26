@@ -2,20 +2,24 @@
 #include <stdio.h>
 #include"main.h"
 /**
- * get_bit - convert
- * @n: int
- * @index: index
+ * get_endianness - convert
+ *
  * Return: int
  */
-int get_bit(unsigned long int n, unsigned int index)
+int get_endianness(void)
 {
-	int bit_val;
+	unsigned int num;
+	char *b;
 
-	if (index > 63)
+	num = 0;
+	b = (char *)&num;
+
+	if (*b == 1)
 	{
-		return (-1);
+		return (1);
 	}
-	bit_val = (n >> index) & 1;
-
-	return (bit_val);
+	else
+	{
+		return (0);
+	}
 }
