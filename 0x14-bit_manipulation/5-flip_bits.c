@@ -9,13 +9,17 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int bit_val;
+	unsigned long int xor_res;
+	unsigned int c;
 
-	if (index > 63)
+	xor_res = n ^ m;
+	c = 0;
+
+	while (xor_res)
 	{
-		return (-1);
+		c += xor_res & 1;
+		xor_res >>= 1;
 	}
-	bit_val = (n >> index) & 1;
 
-	return (bit_val);
+	return (c);
 }
