@@ -4,12 +4,12 @@
 #include "lists.h"
 
 /**
- * add_nodeint - print douly linked list
+ * add_dnodeint - print douly linked list
  * @head: pointer to the d list
  * @n: count
  * Return: number of nodes
  */
-dlistint_t *add_nodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node;
 
